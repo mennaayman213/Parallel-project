@@ -29,6 +29,6 @@ class Task implements Runnable {
         } catch (InterruptedException e) {
             System.out.println("Error: " + e.getMessage());
         }
-        System.out.println("✅ Task " + taskId + " is finished.");
+        System.out.println("Task " + taskId + " is finished.");
     }
 }
