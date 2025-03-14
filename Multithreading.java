@@ -23,7 +23,7 @@ class Task implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("🔹 Task " + taskId + " is running on thread: " + Thread.currentThread().getName());
+        System.out.println("Task " + taskId + " is running on thread: " + Thread.currentThread().getName());
         try {
             Thread.sleep(2000); 
         } catch (InterruptedException e) {
