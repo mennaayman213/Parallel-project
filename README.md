@@ -69,15 +69,6 @@ For **Batch Processing**, output logs will show job execution details, including
 [INFO] Job completed successfully.
 ```
 
-## 🔧 Potential Future Improvements
-- Use **Callable & Future** instead of `Runnable` to return results after processing.
-- Support **API-based request submission** instead of reading from a CSV file.
-- Store requests and their results in a **database (MySQL / MongoDB).**
-- Add a **Graphical User Interface (GUI)** to monitor request processing status.
-- Implement **more advanced batch job scheduling** using **Spring Scheduler**.
 
-## 📜 License
-This project is open-source and available under the **MIT License**.
 
----
-**💡 Have suggestions to improve the project? Feel free to contribute! 🚀**
+
