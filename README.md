@@ -1,67 +1,83 @@
-# ؛
-# ؛
-# Parallel Customer Request Processing
-Description
+# 📌 Parallel Customer Request Processing in Java
 
-This project demonstrates the concept of multithreading in Java by creating multiple threads to run concurrent tasks. Each thread executes a simple task that simulates a long-running operation using Thread.sleep().
+## 📖 Project Description
+This project demonstrates **parallel processing of customer requests** stored in a **CSV file or database** using **Multi-threading** in Java. Each request runs in a **separate thread**, allowing multiple requests to be processed simultaneously, improving performance and reducing response time.
 
-Features
+Additionally, this project explores **Batch Processing with Spring** to handle large-scale data processing efficiently. The batch processing feature enables **ETL (Extract, Transform, Load) operations**, making it suitable for data analysis and enterprise applications.
 
-Creates multiple threads dynamically.
+## 🛠 Technologies Used
+- **Java** – Primary programming language.
+- **Multithreading** – For parallel execution of requests.
+- **Thread Pool (ExecutorService)** – For efficient resource management.
+- **File Handling & Database Access (JDBC / JPA)** – For reading and writing customer requests.
+- **Spring Batch** – For large-scale batch processing and ETL operations.
 
-Each thread runs independently.
+## ⚙️ How to Run the Project
+### 1️⃣ Prerequisites
+- **Java Development Kit (JDK) 19** or later.
+- **NetBeans / IntelliJ IDEA / Eclipse** or any Java-compatible IDE.
+- **MySQL / PostgreSQL / Any Database (if using DB Processing).**
+- **Spring Framework & Spring Boot (if using Batch Processing).**
 
-Simulates real-world parallel processing using Runnable.
-
-Uses exception handling for interrupted threads.
-
-Requirements
-
-Java Development Kit (JDK) 19 or later.
-
-NetBeans IDE or any Java-compatible IDE.
-
-
-How to Run
-
-1) Open the project in your preferred IDE.
-
-2) Compile the project using:
+### 2️⃣ Execution Steps
+#### Multi-threading Execution
+1. Open the project in your preferred IDE.
+2. Ensure the `customer_requests.csv` file or database is properly configured.
+3. Compile and run the Java program using:
+   ```sh
    javac Main.java
-
-3) Run the project using:
    java Main
+   ```
+4. The program will read customer requests and process them in parallel.
 
-Code Overview
+#### Batch Processing Execution (Spring Batch)
+1. Set up **Spring Boot** project with **Spring Batch** dependencies.
+2. Configure a **Job**, **Step**, and **Tasklet** to process requests in batches.
+3. Run the Spring Boot application to process customer requests in batch mode.
 
-  Main class: Initializes and starts multiple threads.
-  
-  Task class: Implements Runnable and defines the logic for each thread.
-  
-  Each task prints its execution details and sleeps for 2 seconds before completing.
+## 🚀 How It Works
+### Multi-threading Approach
+1. **Read requests from a CSV file or database.**
+2. **Distribute requests across multiple threads.**
+3. **Each thread processes a request independently.**
+4. **Threads synchronize results and write back to the file/database.**
+5. **Shutdown the Thread Pool after processing all requests.**
 
-Expected Output
+### Batch Processing Approach
+1. **Spring Batch reads the requests** from a CSV file or database.
+2. **Processes them in defined chunks** (batch size configurable).
+3. **Each batch is handled sequentially** using a Job and Step execution model.
+4. **Results are stored** in a database or written to an output file.
 
-  Upon execution, the program will start three threads that print their execution status. The output may appear in a different order due to concurrent execution.
-  Example
-    🔹 Task 2 is running on thread: Thread-1
-    🔹 Task 1 is running on thread: Thread-0
-    🔹 Task 3 is running on thread: Thread-2
-    ✅ Task 3 is finished.
-    ✅ Task 2 is finished.
-    ✅ Task 1 is finished.
+## 🔥 Expected Output
+```
+🔹 Processing request: Request 1 in thread pool-1-thread-1
+🔹 Processing request: Request 2 in thread pool-1-thread-2
+🔹 Processing request: Request 3 in thread pool-1-thread-3
+✅ Request 3 processing completed.
+✅ Request 1 processing completed.
+✅ Request 2 processing completed.
+```
+⚠ **Note**: Output order may vary due to parallel execution.
 
-    
-Possible Improvements
+For **Batch Processing**, output logs will show job execution details, including:
+```
+[INFO] Job started: CustomerRequestJob
+[INFO] Processing batch: 1
+[INFO] Processed request ID: 101
+[INFO] Processed request ID: 102
+[INFO] Job completed successfully.
+```
 
-  Implementing a thread pool for better resource management.
-  
-  Using Callable and Future for returning results from threads.
-  
-  Adding user input to determine the number of threads dynamically.
+## 🔧 Potential Future Improvements
+- Use **Callable & Future** instead of `Runnable` to return results after processing.
+- Support **API-based request submission** instead of reading from a CSV file.
+- Store requests and their results in a **database (MySQL / MongoDB).**
+- Add a **Graphical User Interface (GUI)** to monitor request processing status.
+- Implement **more advanced batch job scheduling** using **Spring Scheduler**.
 
-License
+## 📜 License
+This project is open-source and available under the **MIT License**.
 
-  This project is open-source and available under the MIT License.
-
-
+---
+**💡 Have suggestions to improve the project? Feel free to contribute! 🚀**
