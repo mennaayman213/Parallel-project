@@ -1,5 +1,6 @@
-MultiThreading Project
-
+# ؛
+# ؛
+# Parallel Customer Request Processing
 Description
 
 This project demonstrates the concept of multithreading in Java by creating multiple threads to run concurrent tasks. Each thread executes a simple task that simulates a long-running operation using Thread.sleep().
