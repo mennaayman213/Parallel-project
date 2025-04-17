@@ -13,13 +13,13 @@ Ideal for learning about:
 ### 🖼️ Screenshot
 
 ### ✅ Before Start
-![Before Start](screenshot-start.png)
+![Before Start](before.png)
 
 ### 🔄 During Processing
-![During](screenshot-during.png)
+![During](running.png)
 
 ### ✅ All Tasks Completed
-![Completed](screenshot-complete.png)
+![Completed](after.png)
 
 
 
