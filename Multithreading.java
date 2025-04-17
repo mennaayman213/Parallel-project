@@ -22,9 +22,9 @@ public class ParallelProcessingGUI extends JFrame {
 
     public ParallelProcessingGUI() {
         setTitle("Parallel Customer Request Processing");
-        setSize(600, 500); // زيادة حجم النافذة
+        setSize(600, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout(10, 10)); // إضافة هوامش
+        setLayout(new BorderLayout(10, 10));
 
         // Top Panel
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
