@@ -1,60 +1,84 @@
 # 🚀 Parallel Customer Request Processing (Java Swing + Multithreading)
 
 ## 📌 Overview
-This project demonstrates how to process multiple customer requests **in parallel** using Java's multithreading capabilities and a graphical interface built with **Swing**. It uses a **fixed thread pool** to manage resources efficiently and simulate realistic task durations.
+This project demonstrates how to handle multiple customer requests **in parallel** using Java’s multithreading capabilities and a GUI built with **Swing**. It simulates real-time task durations and utilizes a fixed thread pool to manage resources efficiently.
 
-> Ideal for learning multithreading, GUI design, and concurrent task handling in Java.
+Ideal for learning about:
+- Multithreading
+- GUI development with Swing
+- Concurrent task handling
+
+---
+
+### 🖼️ Screenshot
+
+### ✅ Before Start
+![Before Start](screenshot-start.png)
+
+### 🔄 During Processing
+![During](screenshot-during.png)
+
+### ✅ All Tasks Completed
+![Completed](screenshot-complete.png)
+
+
 
 ---
 
 ## 🧠 Features
-- 💬 **User Input** – Choose how many customer requests to process.
-- ⚙ **Thread Pool (Fixed)** – 5 threads working simultaneously.
-- 🧵 **Simulated Task Time** – Each request takes a random time (1–5 seconds).
-- 🪟 **Java Swing GUI** – Clean interface with real-time log output.
-- 📥 **Scalable Design** – Ready for integration with files (CSV) or databases.
-  
+- 💬 **User Input** – Specify the number of customer requests to process.
+- ⚙️ **Thread Pool (Fixed)** – Uses 5 worker threads for concurrent execution.
+- ⏳ **Simulated Task Duration** – Each task randomly lasts 1–5 seconds.
+- 🪟 **Java Swing GUI** – User-friendly interface with real-time log output.
+- 📥 **Scalable Design** – Ready for future integrations (e.g., files, databases).
+
 ---
 
 ## 🛠 Technologies Used
 - Java 17+
-- Swing (for GUI)
-- ExecutorService (Thread Pool)
-- java.time (for timestamps)
+- Swing (Java GUI Framework)
+- `ExecutorService` (Thread Pool)
+- `java.time` (for timestamp formatting)
 
 ---
 
-## 🔧 How to Run
+## ▶️ How to Run
 
-### 🧑‍💻 Prerequisites
-- Java JDK 17 or later
-- Any IDE (NetBeans, IntelliJ, Eclipse)
+### 🔧 Prerequisites
+- Java JDK 17 or later installed
+- Any Java IDE (NetBeans, IntelliJ IDEA, Eclipse)
 
-### ▶️ Run Steps
-1. Clone this repo or download the source.
-2. Open the project in your IDE.
-3. Compile and run `ParallelProcessingGUI.java`.
-4. Enter number of requests and click **Start Processing**.
+### 📦 Run Instructions
+1. Clone this repository or download the source code.
+2. Open the project in your preferred IDE.
+3. Compile and run the `ParallelProcessingGUI.java` file.
+4. Enter the number of requests to process.
+5. Click **Start Processing** and watch tasks being executed in parallel!
 
 ---
 
 ## 💡 Future Enhancements
-- 📁 Load customer requests from a CSV file.
-- 💽 Store results into a database.
-- 📊 Visualize processing stats (completion time, active threads).
-- 🔁 Add Spring Batch support for large-scale batch operations.
+- 📁 Load requests from a **CSV file**.
+- 💽 Store results into a **database**.
+- 📊 Add **visual stats** (e.g., task duration, active threads).
+- 🔁 Integrate with **Spring Batch** for large-scale operations.
 
 ---
 
 ## 🤝 Contribution
-Feel free to fork the repo and submit pull requests for improvements!
+Contributions are welcome!  
+Fork the repo and submit a pull request with your enhancements or bug fixes.
 
 ---
 
-## 🧑‍💻 Author
-Developed by mina tawfik, mostafa sherif, mennatullah ayman, manar ghareeb
+## 👨‍💻 Authors
+Developed by:
+- Mina Tawfik  
+- Mostafa Sherif  
+- Mennatullah Ayman  
+- Manar Ghareeb  
 
 ---
 
 ## 📜 License
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
